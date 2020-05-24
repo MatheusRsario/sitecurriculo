@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("img/fundo.jpeg");
+    background-size:auto 100vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}  
+
+a{
+    text-decoration: none;
+    color: rgb(0, 204, 255);
+}
+a:hover {
+    text-decoration: underline;
+}
+.menu{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+    background-color: whitesmoke;
+    text-align: center;
+}
+.menu li{
+    list-style: none;   
+}
+.menu a{
+    padding: 3px 25px;
+    color: rgb(0, 204, 255);
+    display: block;    
+}
+.menu a:hover{
+    color: whitesmoke;
+    background-color: rgb(0, 204, 255); 
+}
+.menu ul{
+    display: flex;
+    justify-content: center;   
+}
+
+.site-title,
+.site-subtitle{
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.0em;
+}
+.img-portfolio{
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+    
+}
+.img-portfolio:hover{
+    transform: scale(1.2);
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    transform: scale(.2) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+}
+@keyframes animacaoTitulo{
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+#sobre,
+.portfolio{
+    padding: 2em;
+    min-height: 100vh;
+}
+@media (min-width: 1200px){
+    .sobre,
+    .portfolio{
+        padding: 2em;
+        min-height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+    }  
+}
+
+#sobre{
+    color: rgb(0, 204, 255);
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: whitesmoke;
+}
+#sobre a{
+    color: cyan;
+}
+#sobre .foto-perfil{
+    text-align: center;   
+    margin-left: 2em;
+}
+#sobre .foto-perfil img{
+    border-radius: 50%;
+    width: 250px;
+    height: 100;
+}
+#sobre h2{
+    text-align: left;
+}
+#sobre p{
+    text-indent: 1.4em;
+    margin-bottom: 1.4em;
+    text-align: center;
+}
+.portfolio{
+    text-align: center;
+    color:whitesmoke;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: rgb(0, 204, 255);
+}
+.portfolio .grid{
+    text-align: center;
+    display: grid;
+}
+@media (min-width: 700px){
+    .portfolio .grid{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        justify-content: center;
+    }
+    .section-experiencia,
+    .section-esuperior,
+    .section-emedio{
+        width: 500px;
+    }
+}
+@media (min-width: 1000px){
+    .portfolio .grid{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        justify-content: center;
+    }
+    .section-experiencia,
+    .section-esuperior,
+    .section-emedio{
+        width: 700px;
+    }
+}
+@media (max-height:400px){
+    .section-experiencia,
+    .section-esuperior,
+    .section-emedio{
+        height: 600px;
+        margin-top: 25vh;
+    }
+}
+@media (max-height:300px){
+    .section-experiencia,
+    .section-esuperior,
+    .section-emedio{
+        height: 500px;
+        margin-top: 15vh;
+    }
+}
+.portfolio h2{
+    text-align: left;
+}
+.portfolio figure{
+    margin-top: 15vh;
+    text-align: center;
+}
+.contato{
+    background-color: rgb(51, 50, 50);
+    height: auto;
+}
+.contato p{
+    text-align: center;
+    color: whitesmoke;
+}
+.contato a{
+    color: whitesmoke;
+    font-size: 3em;
+}
+.contato h2{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(0, 204, 255);
+}
+.contato .grid-icons{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,100px);
+}
+.contato a:active,
+.contato a:hover{
+    text-decoration: none;
+    text-shadow:0px 0px 10px rgb(0, 204, 255);
+}
+.section-experiencia,
+.section-esuperior,
+.section-emedio{
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-top: 25vh;
+    margin-right: auto;
+    box-shadow: 5px 5px 10px;
+    padding: 5px;
+}
+.section-experiencia h3,
+.section-experiencia p{
+    text-align: left;
+    color: black;
+}
+.section-experiencia a{
+    text-decoration: none;
+}
+
+.img-experiencia,
+.img-esuperior,
+.img-emedio{
+    padding: 5px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.voltar{
+    padding: 5px;
+    font-size: 2em;
+}
+
