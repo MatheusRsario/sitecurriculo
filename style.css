@@ -43,7 +43,7 @@ a:hover {
 
 .site-title,
 .site-subtitle{
-    color: whitesmoke;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
     padding: 10px;
     font-family: 'Noto Sans KR', sans-serif;
